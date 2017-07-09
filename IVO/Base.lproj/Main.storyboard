@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cy3-lm-rIP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Exo-Bold.otf">
+            <string>Exo-Bold</string>
+        </array>
+        <array key="Exo-Light.otf">
+            <string>Exo-Light</string>
+        </array>
+        <array key="Exo-Medium.otf">
+            <string>Exo-Medium</string>
+        </array>
+        <array key="Exo-Regular.otf">
+            <string>Exo-Regular</string>
+        </array>
+        <array key="Exo-SemiBoldItalic.otf">
+            <string>Exo-DemiBoldItalic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginView" id="BYZ-38-t0r" customClass="ViewController" customModule="IVO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundLogin.png" translatesAutoresizingMaskIntoConstraints="NO" id="o1Q-ER-cgi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTy-kc-bAZ" customClass="Y">
+                                <rect key="frame" x="16" y="0.0" width="343" height="603"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="hello@ivo.com" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dCU-R1-9hx">
+                                        <rect key="frame" x="40" y="334" width="263" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dCU-R1-9hx" secondAttribute="height" multiplier="235:17" constant="-26" id="7yt-jE-lF3"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="25"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="sen-hF-Qm9"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="––– O utilizando tu correo electrónico –––" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMJ-59-Ox5">
+                                        <rect key="frame" x="27" y="294" width="289" height="15"/>
+                                        <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="11"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="21"/>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="••••••••" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JvU-ct-L8d">
+                                        <rect key="frame" x="40" y="391" width="263" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="JvU-ct-L8d" secondAttribute="height" multiplier="235:17" constant="-26" id="dny-uS-doQ"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="25"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="gJ2-tu-dMm"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5E-tp-1wP">
+                                        <rect key="frame" x="27" y="245" width="289" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="d5E-tp-1wP" secondAttribute="height" multiplier="254:29" constant="-45.275862068965523" id="Wah-QD-rPT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="13"/>
+                                        <state key="normal" title="INICIA SESIÓN CON GOOGLE" backgroundImage="ButtonGmail.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="25"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="loginGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBR-9a-q5a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bu-Mr-sat">
+                                        <rect key="frame" x="27" y="195" width="288" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8bu-Mr-sat" secondAttribute="height" multiplier="11:1" constant="-117" id="xBS-Mb-RTy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="13"/>
+                                        <state key="normal" title="INICIA SESIÓN CON FACEBOOK" backgroundImage="ButtonFacebook.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="25"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="Hola:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xl-G1-o86"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-N1-FP1">
+                                        <rect key="frame" x="34" y="25" width="274" height="148"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-su-AZU">
+                                        <rect key="frame" x="40" y="449" width="263" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="k9W-su-AZU" secondAttribute="height" multiplier="235:22" constant="-132.81818181818181" id="2kr-OY-bk3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="15"/>
+                                        <state key="normal" title="Entrar →" backgroundImage="ButtonGo.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="LogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HM0-Kb-UAd"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LineGreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lqp-Bi-jN6">
+                                        <rect key="frame" x="40" y="351" width="263" height="13.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Lqp-Bi-jN6" secondAttribute="height" multiplier="19:1" id="SmD-Ml-Vfa"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LineGreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="pOO-aD-B8a">
+                                        <rect key="frame" x="40" y="408" width="263" height="13.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pOO-aD-B8a" secondAttribute="height" multiplier="19:1" id="G59-56-6oB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Olvidó Contraseña?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3P-M5-hRz">
+                                        <rect key="frame" x="40" y="494" width="263" height="13.5"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="10"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="20"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baK-nc-Opx">
+                                        <rect key="frame" x="40" y="515.5" width="263" height="26"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="10"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="20"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="APq-J7-f1J" kind="show" id="Jo4-9q-wm5"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0G-VK-m0S">
+                                        <rect key="frame" x="8" y="339.5" width="326" height="70.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clave y usuario no concuerdan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGZ-B0-r5m">
+                                                <rect key="frame" x="17" y="21" width="247" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="27"/>
+                                                </variation>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdE-jc-CQm">
+                                                <rect key="frame" x="297" y="23.5" width="23" height="23"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="23" id="S2W-eH-ZID"/>
+                                                    <constraint firstAttribute="height" constant="23" id="n1M-1M-Oro"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <state key="normal" backgroundImage="Close.png">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="closeModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K9l-k4-mfH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.73499036815068497" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="sGZ-B0-r5m" firstAttribute="leading" secondItem="e0G-VK-m0S" secondAttribute="leading" constant="17" id="2ae-Sm-VQN"/>
+                                            <constraint firstAttribute="trailing" secondItem="sGZ-B0-r5m" secondAttribute="trailing" constant="62" id="4xO-I5-C8z"/>
+                                            <constraint firstItem="gdE-jc-CQm" firstAttribute="centerY" secondItem="sGZ-B0-r5m" secondAttribute="centerY" id="Qsa-tP-ppw"/>
+                                            <constraint firstAttribute="width" secondItem="e0G-VK-m0S" secondAttribute="height" multiplier="272:59" id="bXS-JN-O16"/>
+                                            <constraint firstAttribute="bottom" secondItem="sGZ-B0-r5m" secondAttribute="bottom" constant="22" id="hIm-wc-x66"/>
+                                            <constraint firstItem="sGZ-B0-r5m" firstAttribute="top" secondItem="e0G-VK-m0S" secondAttribute="top" constant="21" id="ykb-AW-KlC"/>
+                                            <constraint firstAttribute="trailing" secondItem="gdE-jc-CQm" secondAttribute="trailing" constant="6" id="zf3-H9-Bcd"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpF-0o-gkD" customClass="GIDSignInButton">
+                                        <rect key="frame" x="10" y="5" width="322" height="23"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="1ZY-bR-nya"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JvU-ct-L8d" firstAttribute="top" secondItem="dCU-R1-9hx" secondAttribute="bottom" constant="36" id="0IN-If-TY2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lqp-Bi-jN6" secondAttribute="trailing" constant="39" id="3gc-FT-FNL"/>
+                                    <constraint firstAttribute="trailing" secondItem="k9W-su-AZU" secondAttribute="trailing" constant="39" id="3rA-wi-3Ol"/>
+                                    <constraint firstItem="e0G-VK-m0S" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="8" id="51m-YF-AIK"/>
+                                    <constraint firstItem="d5E-tp-1wP" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="27" id="5GY-W3-2rZ"/>
+                                    <constraint firstItem="dCU-R1-9hx" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="40" id="Eea-eW-1dR"/>
+                                    <constraint firstItem="baK-nc-Opx" firstAttribute="top" secondItem="c3P-M5-hRz" secondAttribute="bottom" constant="8" id="FAk-F5-e7l"/>
+                                    <constraint firstItem="HPt-N1-FP1" firstAttribute="top" secondItem="pTy-kc-bAZ" secondAttribute="top" constant="25" id="Fqp-ZU-4Rh"/>
+                                    <constraint firstItem="JvU-ct-L8d" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="40" id="HTx-XG-S9G"/>
+                                    <constraint firstItem="k9W-su-AZU" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="40" id="KMf-mc-xRq"/>
+                                    <constraint firstAttribute="trailing" secondItem="c3P-M5-hRz" secondAttribute="trailing" constant="39" id="MTy-SU-fIm"/>
+                                    <constraint firstItem="LMJ-59-Ox5" firstAttribute="centerY" secondItem="pTy-kc-bAZ" secondAttribute="centerY" id="Mm8-ZO-MNF"/>
+                                    <constraint firstAttribute="trailing" secondItem="dCU-R1-9hx" secondAttribute="trailing" constant="39" id="NFr-4d-dBz"/>
+                                    <constraint firstAttribute="trailing" secondItem="8bu-Mr-sat" secondAttribute="trailing" constant="27" id="Nia-Pt-8wd"/>
+                                    <constraint firstItem="LMJ-59-Ox5" firstAttribute="centerX" secondItem="pTy-kc-bAZ" secondAttribute="centerX" constant="0.5" id="PNe-hR-tNK"/>
+                                    <constraint firstItem="Lqp-Bi-jN6" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="40" id="QdI-Uo-bVl"/>
+                                    <constraint firstItem="HPt-N1-FP1" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="34" id="Rur-dE-o3a"/>
+                                    <constraint firstItem="dCU-R1-9hx" firstAttribute="top" secondItem="LMJ-59-Ox5" secondAttribute="bottom" constant="25" id="V2N-qr-6V0"/>
+                                    <constraint firstAttribute="bottom" secondItem="LMJ-59-Ox5" secondAttribute="bottom" constant="266" id="VZn-7n-wbw"/>
+                                    <constraint firstItem="baK-nc-Opx" firstAttribute="trailing" secondItem="c3P-M5-hRz" secondAttribute="trailing" id="XcD-I3-ZKk"/>
+                                    <constraint firstAttribute="trailing" secondItem="e0G-VK-m0S" secondAttribute="trailing" constant="8" id="Yy6-Ps-amK"/>
+                                    <constraint firstAttribute="trailing" secondItem="qpF-0o-gkD" secondAttribute="trailing" constant="10" id="bDV-26-xLk"/>
+                                    <constraint firstAttribute="trailing" secondItem="pOO-aD-B8a" secondAttribute="trailing" constant="39" id="e8r-zm-1I0"/>
+                                    <constraint firstAttribute="trailing" secondItem="HPt-N1-FP1" secondAttribute="trailing" constant="34" id="egx-tZ-tPL"/>
+                                    <constraint firstItem="Lqp-Bi-jN6" firstAttribute="top" secondItem="dCU-R1-9hx" secondAttribute="bottom" constant="-4" id="eja-az-siS"/>
+                                    <constraint firstAttribute="trailing" secondItem="LMJ-59-Ox5" secondAttribute="trailing" constant="26" id="g1L-6L-ZOK"/>
+                                    <constraint firstItem="8bu-Mr-sat" firstAttribute="top" secondItem="HPt-N1-FP1" secondAttribute="bottom" constant="21.666666666666686" id="gG2-8h-Wo6"/>
+                                    <constraint firstItem="c3P-M5-hRz" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="40" id="gcB-yb-hvF"/>
+                                    <constraint firstAttribute="trailing" secondItem="d5E-tp-1wP" secondAttribute="trailing" constant="26" id="h4z-tY-ZsQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="JvU-ct-L8d" secondAttribute="trailing" constant="39" id="h8K-Wa-SHM"/>
+                                    <constraint firstItem="pOO-aD-B8a" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="40" id="hdm-LH-jjc"/>
+                                    <constraint firstItem="qpF-0o-gkD" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="10" id="k6e-EB-zF9"/>
+                                    <constraint firstItem="pOO-aD-B8a" firstAttribute="top" secondItem="JvU-ct-L8d" secondAttribute="bottom" constant="-4" id="lAA-Hh-8zx"/>
+                                    <constraint firstItem="qpF-0o-gkD" firstAttribute="top" secondItem="pTy-kc-bAZ" secondAttribute="top" constant="5" id="plK-UZ-jRE"/>
+                                    <constraint firstItem="LMJ-59-Ox5" firstAttribute="top" secondItem="d5E-tp-1wP" secondAttribute="bottom" constant="11" id="plX-0r-k5c"/>
+                                    <constraint firstItem="k9W-su-AZU" firstAttribute="top" secondItem="pOO-aD-B8a" secondAttribute="bottom" constant="27.5" id="pog-KC-hct"/>
+                                    <constraint firstItem="c3P-M5-hRz" firstAttribute="top" secondItem="k9W-su-AZU" secondAttribute="bottom" constant="8" id="py8-Qz-V2n"/>
+                                    <constraint firstItem="8bu-Mr-sat" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="27" id="qzH-Wj-D8S"/>
+                                    <constraint firstItem="e0G-VK-m0S" firstAttribute="top" secondItem="LMJ-59-Ox5" secondAttribute="bottom" constant="30.5" id="tfM-5H-Ng8"/>
+                                    <constraint firstItem="d5E-tp-1wP" firstAttribute="top" secondItem="8bu-Mr-sat" secondAttribute="bottom" constant="12.666666666666629" id="uRp-vR-RsX"/>
+                                    <constraint firstItem="baK-nc-Opx" firstAttribute="leading" secondItem="c3P-M5-hRz" secondAttribute="leading" id="uhf-fG-sLL"/>
+                                    <constraint firstItem="LMJ-59-Ox5" firstAttribute="leading" secondItem="pTy-kc-bAZ" secondAttribute="leading" constant="27" id="vO8-y5-2Kn"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="o1Q-ER-cgi" secondAttribute="trailing" id="2Ga-3L-XwK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o1Q-ER-cgi" secondAttribute="bottom" id="8gJ-Zl-M8D"/>
+                            <constraint firstItem="pTy-kc-bAZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Fcy-pz-A6A"/>
+                            <constraint firstItem="o1Q-ER-cgi" firstAttribute="firstBaseline" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Md6-Bf-hO5"/>
+                            <constraint firstItem="o1Q-ER-cgi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Q4F-9Z-4RZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pTy-kc-bAZ" secondAttribute="trailing" id="ppo-0x-sDu"/>
+                            <constraint firstItem="pTy-kc-bAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sx0-wz-DKz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pTy-kc-bAZ" secondAttribute="bottom" id="zLm-NP-LF2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2ql-65-VdP"/>
+                    <connections>
+                        <outlet property="LoginFacebook" destination="8bu-Mr-sat" id="Kh2-MV-hQO"/>
+                        <outlet property="LoginGoogle" destination="d5E-tp-1wP" id="Qzj-zM-Ka5"/>
+                        <outlet property="MsjError" destination="e0G-VK-m0S" id="UB3-f2-VCq"/>
+                        <outlet property="ScrollElement" destination="pTy-kc-bAZ" id="SPf-X8-5s2"/>
+                        <outlet property="forgotPass" destination="c3P-M5-hRz" id="WZc-ZD-IUi"/>
+                        <outlet property="register" destination="baK-nc-Opx" id="wCP-27-XJ7"/>
+                        <outlet property="signInButton" destination="qpF-0o-gkD" id="hOc-23-cfH"/>
+                        <outlet property="textEmail" destination="dCU-R1-9hx" id="a2K-VG-hpV"/>
+                        <outlet property="textPass" destination="JvU-ct-L8d" id="Pwk-jj-h7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2125.5999999999999" y="134.48275862068968"/>
+        </scene>
+        <!--Forgot Pass Controller-->
+        <scene sceneID="6rG-t8-6t8">
+            <objects>
+                <viewController storyboardIdentifier="forgotPass" id="284-GN-Kw9" customClass="ForgotPassController" customModule="IVO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AdX-vq-JLv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Esp-FP-JHC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="phT-3s-67k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVq-0d-S8j">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POR FAVOR ENVIAR UN CORREO PARA RECUPERAR CONTRASEÑA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kM-b8-pG8">
+                                        <rect key="frame" x="22" y="302.5" width="331" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1kM-b8-pG8" secondAttribute="height" multiplier="152:27" constant="-28" id="LxO-Yk-cfS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="32"/>
+                                        </variation>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LineGreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="f27-sx-lAf">
+                                        <rect key="frame" x="22" y="239.5" width="231" height="3"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OLVIDÓ CONTRASEÑA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nav-9I-bVu">
+                                        <rect key="frame" x="22" y="170.5" width="231" height="64"/>
+                                        <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="60"/>
+                                        </variation>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoTop.png" translatesAutoresizingMaskIntoConstraints="NO" id="dDO-V6-UG8">
+                                        <rect key="frame" x="22" y="17" width="232" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="pVS-qM-o5x"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdV-aE-Cth">
+                                        <rect key="frame" x="22" y="396.5" width="55" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.76862745098039209" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="30"/>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pHE-Fz-Y9n">
+                                        <rect key="frame" x="22" y="421" width="331" height="31"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="37"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="284-GN-Kw9" id="JYS-9s-LO4"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfW-qY-KtP">
+                                        <rect key="frame" x="22" y="466" width="40" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.76862745099999996" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="30"/>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUg-p0-eDa">
+                                        <rect key="frame" x="22" y="490.5" width="331" height="31"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="37"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="284-GN-Kw9" id="eqP-wp-wAP"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXx-jh-Qy0">
+                                        <rect key="frame" x="333" y="26" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fXx-jh-Qy0" secondAttribute="height" multiplier="1:1" id="Tlg-Z4-g8k"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Jp" image="Close.png"/>
+                                        <connections>
+                                            <action selector="BackLogin:" destination="284-GN-Kw9" eventType="touchUpInside" id="gOU-vU-YhY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR9-lR-pY7">
+                                        <rect key="frame" x="125" y="547.5" width="125" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gR9-lR-pY7" secondAttribute="height" multiplier="15:2" constant="-100" id="7gC-DK-JQn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="15"/>
+                                        <state key="normal" title="Enviar" backgroundImage="ButtonGo.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="32"/>
+                                        </variation>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dDO-V6-UG8" firstAttribute="leading" secondItem="fVq-0d-S8j" secondAttribute="leading" constant="22" id="3BJ-2m-xUb"/>
+                                    <constraint firstItem="gR9-lR-pY7" firstAttribute="leading" secondItem="fVq-0d-S8j" secondAttribute="leading" constant="125" id="APh-r2-nEN"/>
+                                    <constraint firstItem="pHE-Fz-Y9n" firstAttribute="top" secondItem="xdV-aE-Cth" secondAttribute="bottom" constant="3" id="AwI-ic-Z9h"/>
+                                    <constraint firstItem="pHE-Fz-Y9n" firstAttribute="leading" secondItem="1kM-b8-pG8" secondAttribute="leading" id="CMX-Hb-afX"/>
+                                    <constraint firstAttribute="bottom" secondItem="gR9-lR-pY7" secondAttribute="bottom" constant="40" id="DxY-h6-8vj"/>
+                                    <constraint firstItem="ZUg-p0-eDa" firstAttribute="leading" secondItem="pHE-Fz-Y9n" secondAttribute="leading" id="Fhe-Oy-eeG"/>
+                                    <constraint firstItem="NfW-qY-KtP" firstAttribute="leading" secondItem="fVq-0d-S8j" secondAttribute="leading" constant="22" id="Gjn-mN-Cfb"/>
+                                    <constraint firstItem="xdV-aE-Cth" firstAttribute="top" secondItem="1kM-b8-pG8" secondAttribute="bottom" constant="30" id="JqO-ve-xce"/>
+                                    <constraint firstAttribute="trailing" secondItem="fXx-jh-Qy0" secondAttribute="trailing" constant="22" id="JtO-Pv-R0K"/>
+                                    <constraint firstItem="pHE-Fz-Y9n" firstAttribute="trailing" secondItem="1kM-b8-pG8" secondAttribute="trailing" id="MHh-wj-qg4"/>
+                                    <constraint firstItem="ZUg-p0-eDa" firstAttribute="top" secondItem="NfW-qY-KtP" secondAttribute="bottom" constant="3" id="NZY-4Y-6RC"/>
+                                    <constraint firstItem="fXx-jh-Qy0" firstAttribute="top" secondItem="fVq-0d-S8j" secondAttribute="top" constant="26" id="SuC-O2-yrX"/>
+                                    <constraint firstItem="Nav-9I-bVu" firstAttribute="leading" secondItem="dDO-V6-UG8" secondAttribute="leading" id="Swy-jK-yj7"/>
+                                    <constraint firstItem="1kM-b8-pG8" firstAttribute="centerY" secondItem="fVq-0d-S8j" secondAttribute="centerY" constant="1" id="TsU-om-8qb"/>
+                                    <constraint firstItem="f27-sx-lAf" firstAttribute="leading" secondItem="Nav-9I-bVu" secondAttribute="leading" id="WQN-1O-d45"/>
+                                    <constraint firstItem="NfW-qY-KtP" firstAttribute="top" secondItem="pHE-Fz-Y9n" secondAttribute="bottom" constant="14" id="Wrf-R8-gCC"/>
+                                    <constraint firstItem="1kM-b8-pG8" firstAttribute="leading" secondItem="fVq-0d-S8j" secondAttribute="leading" constant="22" id="Wwa-LS-F0J"/>
+                                    <constraint firstAttribute="trailing" secondItem="gR9-lR-pY7" secondAttribute="trailing" constant="125" id="aeF-BU-49T"/>
+                                    <constraint firstItem="f27-sx-lAf" firstAttribute="top" secondItem="Nav-9I-bVu" secondAttribute="bottom" constant="5" id="bNc-CP-4hs"/>
+                                    <constraint firstItem="1kM-b8-pG8" firstAttribute="centerX" secondItem="fVq-0d-S8j" secondAttribute="centerX" id="ch2-aJ-4La"/>
+                                    <constraint firstItem="fXx-jh-Qy0" firstAttribute="leading" secondItem="dDO-V6-UG8" secondAttribute="trailing" constant="79" id="eBl-PT-QNG"/>
+                                    <constraint firstItem="ZUg-p0-eDa" firstAttribute="height" secondItem="pHE-Fz-Y9n" secondAttribute="height" id="eId-jW-9v8"/>
+                                    <constraint firstAttribute="trailing" secondItem="1kM-b8-pG8" secondAttribute="trailing" constant="22" id="eb3-Qe-gt9"/>
+                                    <constraint firstAttribute="trailing" secondItem="dDO-V6-UG8" secondAttribute="trailing" constant="121" id="ggH-5b-6aZ"/>
+                                    <constraint firstItem="gR9-lR-pY7" firstAttribute="top" secondItem="ZUg-p0-eDa" secondAttribute="bottom" constant="26" id="kbu-gT-d59"/>
+                                    <constraint firstItem="ZUg-p0-eDa" firstAttribute="trailing" secondItem="pHE-Fz-Y9n" secondAttribute="trailing" id="mjb-Lq-lEI"/>
+                                    <constraint firstItem="1kM-b8-pG8" firstAttribute="top" secondItem="Nav-9I-bVu" secondAttribute="bottom" constant="68" id="ml3-rf-0UN"/>
+                                    <constraint firstItem="xdV-aE-Cth" firstAttribute="leading" secondItem="fVq-0d-S8j" secondAttribute="leading" constant="22" id="nHe-6I-dOT"/>
+                                    <constraint firstItem="f27-sx-lAf" firstAttribute="trailing" secondItem="Nav-9I-bVu" secondAttribute="trailing" id="nLp-uZ-t8Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nav-9I-bVu" secondAttribute="trailing" constant="122" id="uXD-Md-wA4"/>
+                                    <constraint firstItem="dDO-V6-UG8" firstAttribute="top" secondItem="fVq-0d-S8j" secondAttribute="top" constant="17" id="wiD-Px-CYm"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fVq-0d-S8j" firstAttribute="top" secondItem="phT-3s-67k" secondAttribute="top" id="0Sx-EH-Gui"/>
+                            <constraint firstAttribute="trailing" secondItem="fVq-0d-S8j" secondAttribute="trailing" id="EHd-Ct-Xwf"/>
+                            <constraint firstItem="fVq-0d-S8j" firstAttribute="leading" secondItem="phT-3s-67k" secondAttribute="leading" id="K2f-Lu-UFI"/>
+                            <constraint firstItem="Esp-FP-JHC" firstAttribute="top" secondItem="fVq-0d-S8j" secondAttribute="bottom" id="Xev-u9-Fkn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ScrollElement" destination="fVq-0d-S8j" id="Knh-JO-Ckp"/>
+                        <outlet property="textEmail" destination="ZUg-p0-eDa" id="3Lo-Vt-dvX"/>
+                        <outlet property="textUser" destination="pHE-Fz-Y9n" id="bSR-j6-hFW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J5a-eM-LZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2115" y="838.73239436619724"/>
+        </scene>
+        <!--Register Controller-->
+        <scene sceneID="agI-uu-vuu">
+            <objects>
+                <viewController storyboardIdentifier="Register" id="APq-J7-f1J" customClass="RegisterController" customModule="IVO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dC4-uw-LOt"/>
+                        <viewControllerLayoutGuide type="bottom" id="A51-ST-Kef"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RZH-uv-JrC">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BGRegister.png" translatesAutoresizingMaskIntoConstraints="NO" id="vd3-cH-qH3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztd-td-5i0">
+                                <rect key="frame" x="16" y="30" width="343" height="573"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="––– O utilizando tu correo electrónico –––" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4y-bf-8cM">
+                                        <rect key="frame" x="25.5" y="266.5" width="292" height="15"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="11"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="22"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8m7-vr-sxq">
+                                        <rect key="frame" x="27" y="217" width="294.5" height="37.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8m7-vr-sxq" secondAttribute="height" multiplier="235:32" constant="17.6875" id="dCi-oa-f2l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="14"/>
+                                        <state key="normal" title="REGÍSTRATE CON GOOGLE" backgroundImage="ButtonGmail.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="28"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7C-2D-hCp">
+                                        <rect key="frame" x="27" y="171.5" width="294.5" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="H7C-2D-hCp" secondAttribute="height" multiplier="241:30" id="f9r-cg-J1J"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="13"/>
+                                        <state key="normal" title="REGÍSTRATE CON FACEBOOK" backgroundImage="ButtonFacebook.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="26"/>
+                                        </variation>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LineRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="Br4-j0-jje">
+                                        <rect key="frame" x="27" y="128.5" width="294.5" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Br4-j0-jje" secondAttribute="height" multiplier="322:15" constant="-6.8666666666666458" id="WMd-9u-fnd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3id-00-3eZ">
+                                        <rect key="frame" x="27" y="73.5" width="294.5" height="56"/>
+                                        <string key="text">REGÍSTRATE EN
+NUESTRA PLATAFORMA</string>
+                                        <fontDescription key="fontDescription" name="Exo-Bold" family="Exo" pointSize="21"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Bold" family="Exo" pointSize="45"/>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0q-z1-nn2">
+                                        <rect key="frame" x="25.5" y="296" width="292" height="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="30"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="APq-J7-f1J" id="u8R-Js-1fN"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSW-HS-Z40">
+                                        <rect key="frame" x="25.5" y="329" width="292" height="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="30"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="APq-J7-f1J" id="fFl-n6-VMm"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Clave" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dy-Tn-Kxp">
+                                        <rect key="frame" x="25.5" y="362" width="292" height="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="30"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="APq-J7-f1J" id="MeS-Hv-HIO"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Confirmar clave" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z09-I6-FPc">
+                                        <rect key="frame" x="25.5" y="395" width="292" height="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="30"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="APq-J7-f1J" id="g0b-Tk-c6Y"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAQ-MA-wzY">
+                                        <rect key="frame" x="66.5" y="428" width="251" height="27"/>
+                                        <fontDescription key="fontDescription" name="Exo-DemiBoldItalic" family="Exo" pointSize="11"/>
+                                        <state key="normal" title="Acepto términos y condiciones">
+                                            <color key="titleColor" red="0.0" green="0.76862745098039209" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-DemiBoldItalic" family="Exo" pointSize="22"/>
+                                        </variation>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zWt-Jn-qji">
+                                        <rect key="frame" x="47.5" y="426" width="51" height="31"/>
+                                    </switch>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGZ-ZB-KcC">
+                                        <rect key="frame" x="88" y="465" width="167" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="UGZ-ZB-KcC" secondAttribute="height" multiplier="112:23" constant="25" id="27R-ff-xaj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="14"/>
+                                        <state key="normal" title="REGISTRAR" backgroundImage="ButtonGo.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="28"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="fOp-c1-aMq" kind="show" id="Hpw-Lw-4bI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="V0q-z1-nn2" firstAttribute="leading" secondItem="X4y-bf-8cM" secondAttribute="leading" id="0EK-Jd-BkC"/>
+                                    <constraint firstItem="4dy-Tn-Kxp" firstAttribute="trailing" secondItem="DSW-HS-Z40" secondAttribute="trailing" id="2TZ-Kx-IeT"/>
+                                    <constraint firstAttribute="trailing" secondItem="8m7-vr-sxq" secondAttribute="trailing" constant="20.666666666666686" id="3oj-eG-0Cr"/>
+                                    <constraint firstItem="eAQ-MA-wzY" firstAttribute="trailing" secondItem="Z09-I6-FPc" secondAttribute="trailing" id="4rF-VD-6Ui"/>
+                                    <constraint firstItem="X4y-bf-8cM" firstAttribute="leading" secondItem="ztd-td-5i0" secondAttribute="leading" constant="25.59136554356769" id="4tP-iX-Sup"/>
+                                    <constraint firstItem="X4y-bf-8cM" firstAttribute="centerY" secondItem="ztd-td-5i0" secondAttribute="centerY" constant="-12.5" id="7gv-Ol-sWg"/>
+                                    <constraint firstItem="8m7-vr-sxq" firstAttribute="top" secondItem="H7C-2D-hCp" secondAttribute="bottom" constant="8.5" id="Bca-Ph-bRt"/>
+                                    <constraint firstItem="H7C-2D-hCp" firstAttribute="leading" secondItem="8m7-vr-sxq" secondAttribute="leading" id="Cv4-HP-MiO"/>
+                                    <constraint firstItem="eAQ-MA-wzY" firstAttribute="top" secondItem="Z09-I6-FPc" secondAttribute="bottom" constant="8" id="Dzx-M6-w1g"/>
+                                    <constraint firstItem="H7C-2D-hCp" firstAttribute="trailing" secondItem="8m7-vr-sxq" secondAttribute="trailing" id="FWx-UW-1gP"/>
+                                    <constraint firstItem="X4y-bf-8cM" firstAttribute="centerX" secondItem="ztd-td-5i0" secondAttribute="centerX" id="ISJ-Ea-6iT"/>
+                                    <constraint firstItem="UGZ-ZB-KcC" firstAttribute="top" secondItem="eAQ-MA-wzY" secondAttribute="bottom" constant="10" id="Lee-Mi-nSG"/>
+                                    <constraint firstItem="Z09-I6-FPc" firstAttribute="top" secondItem="4dy-Tn-Kxp" secondAttribute="bottom" constant="8" id="Lhc-0v-kBj"/>
+                                    <constraint firstItem="Br4-j0-jje" firstAttribute="top" secondItem="3id-00-3eZ" secondAttribute="bottom" constant="-1" id="N0m-Pd-Rwg"/>
+                                    <constraint firstAttribute="trailing" secondItem="X4y-bf-8cM" secondAttribute="trailing" constant="25" id="OnN-tz-9s4"/>
+                                    <constraint firstItem="4dy-Tn-Kxp" firstAttribute="top" secondItem="DSW-HS-Z40" secondAttribute="bottom" constant="8.0000000000000568" id="Ory-QX-TIB"/>
+                                    <constraint firstItem="X4y-bf-8cM" firstAttribute="top" secondItem="8m7-vr-sxq" secondAttribute="bottom" constant="12" id="RJl-Wj-afX"/>
+                                    <constraint firstItem="8m7-vr-sxq" firstAttribute="leading" secondItem="ztd-td-5i0" secondAttribute="leading" constant="27" id="aJI-z5-Meg"/>
+                                    <constraint firstItem="Z09-I6-FPc" firstAttribute="leading" secondItem="4dy-Tn-Kxp" secondAttribute="leading" id="awL-9L-T0n"/>
+                                    <constraint firstItem="V0q-z1-nn2" firstAttribute="trailing" secondItem="DSW-HS-Z40" secondAttribute="trailing" id="b94-w4-JzG"/>
+                                    <constraint firstItem="3id-00-3eZ" firstAttribute="trailing" secondItem="H7C-2D-hCp" secondAttribute="trailing" id="dU9-7J-VG5"/>
+                                    <constraint firstItem="3id-00-3eZ" firstAttribute="leading" secondItem="H7C-2D-hCp" secondAttribute="leading" id="i8T-ac-bOE"/>
+                                    <constraint firstItem="UGZ-ZB-KcC" firstAttribute="leading" secondItem="ztd-td-5i0" secondAttribute="leading" constant="88" id="iwR-ej-1Pm"/>
+                                    <constraint firstItem="UGZ-ZB-KcC" firstAttribute="centerX" secondItem="Z09-I6-FPc" secondAttribute="centerX" id="j12-04-o2W"/>
+                                    <constraint firstItem="V0q-z1-nn2" firstAttribute="trailing" secondItem="X4y-bf-8cM" secondAttribute="trailing" id="jRQ-NW-fkF"/>
+                                    <constraint firstItem="eAQ-MA-wzY" firstAttribute="leading" secondItem="Z09-I6-FPc" secondAttribute="leading" constant="41" id="mcp-Pm-pYY"/>
+                                    <constraint firstItem="Br4-j0-jje" firstAttribute="leading" secondItem="H7C-2D-hCp" secondAttribute="leading" id="ntc-Ad-xbx"/>
+                                    <constraint firstItem="DSW-HS-Z40" firstAttribute="top" secondItem="V0q-z1-nn2" secondAttribute="bottom" constant="8" id="owZ-sH-KLb"/>
+                                    <constraint firstItem="Z09-I6-FPc" firstAttribute="trailing" secondItem="4dy-Tn-Kxp" secondAttribute="trailing" id="qBo-HU-e2M"/>
+                                    <constraint firstItem="H7C-2D-hCp" firstAttribute="top" secondItem="Br4-j0-jje" secondAttribute="bottom" constant="29" id="rBo-yI-Keh"/>
+                                    <constraint firstItem="V0q-z1-nn2" firstAttribute="top" secondItem="X4y-bf-8cM" secondAttribute="bottom" constant="14.5" id="rXv-Id-mV2"/>
+                                    <constraint firstItem="eAQ-MA-wzY" firstAttribute="leading" secondItem="zWt-Jn-qji" secondAttribute="trailing" constant="-30" id="sCk-aY-obR"/>
+                                    <constraint firstItem="zWt-Jn-qji" firstAttribute="centerY" secondItem="eAQ-MA-wzY" secondAttribute="centerY" id="sXs-Fh-SvW"/>
+                                    <constraint firstAttribute="bottom" secondItem="X4y-bf-8cM" secondAttribute="bottom" constant="242" id="ssF-Wn-hBp"/>
+                                    <constraint firstItem="V0q-z1-nn2" firstAttribute="leading" secondItem="DSW-HS-Z40" secondAttribute="leading" id="txx-Jw-NPQ"/>
+                                    <constraint firstItem="Br4-j0-jje" firstAttribute="trailing" secondItem="H7C-2D-hCp" secondAttribute="trailing" id="ypE-B0-kYg"/>
+                                    <constraint firstItem="4dy-Tn-Kxp" firstAttribute="leading" secondItem="DSW-HS-Z40" secondAttribute="leading" id="zkn-ob-5mQ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ztd-td-5i0" firstAttribute="leading" secondItem="RZH-uv-JrC" secondAttribute="leadingMargin" id="ETa-cp-gIf"/>
+                            <constraint firstItem="vd3-cH-qH3" firstAttribute="leading" secondItem="RZH-uv-JrC" secondAttribute="leading" id="ISR-pN-aJG"/>
+                            <constraint firstItem="vd3-cH-qH3" firstAttribute="top" secondItem="RZH-uv-JrC" secondAttribute="top" id="JKj-fv-Jiw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ztd-td-5i0" secondAttribute="trailing" id="LXX-2K-JoD"/>
+                            <constraint firstItem="ztd-td-5i0" firstAttribute="top" secondItem="dC4-uw-LOt" secondAttribute="bottom" constant="30" id="OLR-jr-vXn"/>
+                            <constraint firstItem="A51-ST-Kef" firstAttribute="top" secondItem="vd3-cH-qH3" secondAttribute="bottom" id="UI0-rK-2ac"/>
+                            <constraint firstAttribute="trailing" secondItem="vd3-cH-qH3" secondAttribute="trailing" id="pLO-03-3KY"/>
+                            <constraint firstItem="A51-ST-Kef" firstAttribute="top" secondItem="ztd-td-5i0" secondAttribute="bottom" id="rBU-bJ-GMg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ScrollElement" destination="ztd-td-5i0" id="rLc-ZB-RhF"/>
+                        <outlet property="Switch" destination="zWt-Jn-qji" id="a3o-j2-AVt"/>
+                        <outlet property="textConfirmPass" destination="Z09-I6-FPc" id="d7Q-ri-es1"/>
+                        <outlet property="textEmail" destination="DSW-HS-Z40" id="tJd-xo-byV"/>
+                        <outlet property="textPass" destination="4dy-Tn-Kxp" id="W7Z-Tw-vPP"/>
+                        <outlet property="textUser" destination="V0q-z1-nn2" id="92Z-Yh-6oc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kij-kO-Klk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3001.875" y="134.1549295774648"/>
+        </scene>
+        <!--Register Type Controller-->
+        <scene sceneID="62U-8p-MXB">
+            <objects>
+                <viewController id="fOp-c1-aMq" customClass="RegisterTypeController" customModule="IVO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WTa-9b-G4t"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Vc-6J-ctj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DRy-4u-nGs">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BGRegister.png" translatesAutoresizingMaskIntoConstraints="NO" id="4YP-AX-n0H">
+                                <rect key="frame" x="0.0" y="-65" width="375" height="668"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fL-9a-u7D">
+                                <rect key="frame" x="16" y="30" width="343" height="573"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gD-uy-q94">
+                                        <rect key="frame" x="27" y="41.5" width="295" height="56"/>
+                                        <string key="text">REGÍSTRATE EN
+NUESTRA PLATAFORMA</string>
+                                        <fontDescription key="fontDescription" name="Exo-Bold" family="Exo" pointSize="21"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Bold" family="Exo" pointSize="55"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLn-Ux-uC2">
+                                        <rect key="frame" x="39" y="178" width="265" height="40"/>
+                                        <string key="text">¿Cómo desdeas registrarte
+en IVO Talents?</string>
+                                        <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="30"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sn-tG-Jxf">
+                                        <rect key="frame" x="87" y="254.5" width="174" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6Sn-tG-Jxf" secondAttribute="height" multiplier="90:15" id="97D-Z2-lR9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="13"/>
+                                        <state key="normal" title="ARTISTA" backgroundImage="ButtonArtist.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="28"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="ProfileArtista:" destination="fOp-c1-aMq" eventType="touchUpInside" id="S8p-kT-tIM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hu-Fy-cLy">
+                                        <rect key="frame" x="87" y="305.5" width="174" height="29"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="13"/>
+                                        <state key="normal" title="INDUSTRIA" backgroundImage="ButtonIndustry.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="28"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="ProfileIndustry:" destination="fOp-c1-aMq" eventType="touchUpInside" id="LRh-C5-VtD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUG-oW-6tr">
+                                        <rect key="frame" x="87" y="353.5" width="174" height="29"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="13"/>
+                                        <state key="normal" title="PROVEEDOR" backgroundImage="ButtonProvider.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="28"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="ProfileProvider:" destination="fOp-c1-aMq" eventType="touchUpInside" id="Z6m-AI-hrP"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LineRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="fFh-Ze-Il3">
+                                        <rect key="frame" x="27" y="96.5" width="295" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fFh-Ze-Il3" secondAttribute="height" multiplier="241:11" constant="-11.954545454545467" id="TJe-Ae-pZu"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fFh-Ze-Il3" firstAttribute="leading" secondItem="3gD-uy-q94" secondAttribute="leading" id="2bM-ar-ngI"/>
+                                    <constraint firstItem="9Hu-Fy-cLy" firstAttribute="leading" secondItem="6Sn-tG-Jxf" secondAttribute="leading" id="8dp-FW-ctd"/>
+                                    <constraint firstAttribute="bottom" secondItem="GLn-Ux-uC2" secondAttribute="bottom" constant="305" id="9Ac-NC-Vvh"/>
+                                    <constraint firstItem="6Sn-tG-Jxf" firstAttribute="leading" secondItem="0fL-9a-u7D" secondAttribute="leading" constant="87" id="EwM-em-uZq"/>
+                                    <constraint firstItem="9Hu-Fy-cLy" firstAttribute="trailing" secondItem="6Sn-tG-Jxf" secondAttribute="trailing" id="Hsj-gw-7az"/>
+                                    <constraint firstItem="GLn-Ux-uC2" firstAttribute="centerX" secondItem="0fL-9a-u7D" secondAttribute="centerX" id="JSl-4C-AcS"/>
+                                    <constraint firstItem="GLn-Ux-uC2" firstAttribute="leading" secondItem="0fL-9a-u7D" secondAttribute="leading" constant="39" id="Jxl-an-M7U"/>
+                                    <constraint firstItem="9Hu-Fy-cLy" firstAttribute="height" secondItem="6Sn-tG-Jxf" secondAttribute="height" id="L0a-jX-lr2"/>
+                                    <constraint firstItem="6Sn-tG-Jxf" firstAttribute="top" secondItem="GLn-Ux-uC2" secondAttribute="bottom" constant="36.5" id="NCL-PB-g7J"/>
+                                    <constraint firstItem="vUG-oW-6tr" firstAttribute="trailing" secondItem="9Hu-Fy-cLy" secondAttribute="trailing" id="QM7-7f-ha9"/>
+                                    <constraint firstItem="fFh-Ze-Il3" firstAttribute="top" secondItem="3gD-uy-q94" secondAttribute="bottom" constant="-1" id="TFz-SL-JCO"/>
+                                    <constraint firstItem="GLn-Ux-uC2" firstAttribute="centerY" secondItem="0fL-9a-u7D" secondAttribute="centerY" constant="-88.5" id="WjL-Jx-Ker"/>
+                                    <constraint firstItem="fFh-Ze-Il3" firstAttribute="trailing" secondItem="3gD-uy-q94" secondAttribute="trailing" id="ZDE-oh-ox5"/>
+                                    <constraint firstItem="vUG-oW-6tr" firstAttribute="height" secondItem="6Sn-tG-Jxf" secondAttribute="height" id="Zsh-P4-8pV"/>
+                                    <constraint firstItem="9Hu-Fy-cLy" firstAttribute="top" secondItem="6Sn-tG-Jxf" secondAttribute="bottom" constant="22" id="fUQ-80-81H"/>
+                                    <constraint firstItem="vUG-oW-6tr" firstAttribute="top" secondItem="9Hu-Fy-cLy" secondAttribute="bottom" constant="19" id="mBJ-ki-Nw1"/>
+                                    <constraint firstItem="3gD-uy-q94" firstAttribute="leading" secondItem="0fL-9a-u7D" secondAttribute="leading" constant="27" id="mbu-yx-sbH"/>
+                                    <constraint firstItem="vUG-oW-6tr" firstAttribute="leading" secondItem="9Hu-Fy-cLy" secondAttribute="leading" id="mmq-rr-3zR"/>
+                                    <constraint firstItem="3gD-uy-q94" firstAttribute="top" secondItem="0fL-9a-u7D" secondAttribute="top" constant="41.5" id="pLz-el-zaJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Sn-tG-Jxf" secondAttribute="trailing" constant="82" id="pxi-Gr-1CR"/>
+                                    <constraint firstAttribute="trailing" secondItem="3gD-uy-q94" secondAttribute="trailing" constant="21" id="qLI-sm-Fz2"/>
+                                    <constraint firstAttribute="trailing" secondItem="GLn-Ux-uC2" secondAttribute="trailing" constant="39" id="z2f-dz-92k"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0fL-9a-u7D" secondAttribute="trailing" id="0J2-8Q-DqK"/>
+                            <constraint firstItem="6Vc-6J-ctj" firstAttribute="top" secondItem="0fL-9a-u7D" secondAttribute="bottom" id="11U-3N-aUG"/>
+                            <constraint firstItem="0fL-9a-u7D" firstAttribute="top" secondItem="WTa-9b-G4t" secondAttribute="bottom" constant="30" id="2U1-5T-1x8"/>
+                            <constraint firstAttribute="trailing" secondItem="4YP-AX-n0H" secondAttribute="trailing" id="8fs-mF-dNG"/>
+                            <constraint firstItem="0fL-9a-u7D" firstAttribute="leading" secondItem="DRy-4u-nGs" secondAttribute="leadingMargin" id="Hbz-vg-bhS"/>
+                            <constraint firstItem="4YP-AX-n0H" firstAttribute="top" secondItem="WTa-9b-G4t" secondAttribute="bottom" constant="-65" id="Iok-v3-OUL"/>
+                            <constraint firstItem="6Vc-6J-ctj" firstAttribute="top" secondItem="4YP-AX-n0H" secondAttribute="bottom" id="ldT-F0-zzA"/>
+                            <constraint firstItem="4YP-AX-n0H" firstAttribute="leading" secondItem="DRy-4u-nGs" secondAttribute="leading" id="uLc-po-4xN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IeE-NR-SQT"/>
+                    <connections>
+                        <outlet property="Artista" destination="6Sn-tG-Jxf" id="V9t-Yz-VQF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v83-hL-oMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3806" y="135"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1VM-nx-RJE">
+            <objects>
+                <navigationController storyboardIdentifier="Login" automaticallyAdjustsScrollViewInsets="NO" id="Cy3-lm-rIP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="Na6-wB-cvY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KdF-dq-fiG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwb-kV-ykY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128.75" y="135.21126760563379"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BGRegister.png" width="740" height="1200"/>
+        <image name="BackgroundLogin.png" width="2010" height="1451"/>
+        <image name="ButtonArtist.png" width="279" height="89"/>
+        <image name="ButtonFacebook.png" width="568" height="68"/>
+        <image name="ButtonGmail.png" width="568" height="68"/>
+        <image name="ButtonGo.png" width="513" height="68"/>
+        <image name="ButtonIndustry.png" width="279" height="89"/>
+        <image name="ButtonProvider.png" width="279" height="89"/>
+        <image name="Close.png" width="40" height="38"/>
+        <image name="LineGreen.png" width="512" height="3"/>
+        <image name="LineRed.png" width="558" height="3"/>
+        <image name="Logo.png" width="478" height="331"/>
+        <image name="LogoTop.png" width="399" height="62"/>
+    </resources>
+</document>
